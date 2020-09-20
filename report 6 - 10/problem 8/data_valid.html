@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			function validateForm() {
+			  /*var x = document.forms["employeepro"]["name"].value;
+			  if (x == "") {
+				alert("Name must be filled out");
+				return false;
+			  }*/
+			  if(document.forms.employeepro.name.value==""){
+				  alert("Name must be filled out");
+				  return false;
+			  }
+			  else if(document.forms.employeepro.workshift.value==""){
+				  alert("working must be filled out");
+				  return false;
+			  }else if(document.forms.employeepro.department.value=="null"){
+				  alert("department must be filled out");
+				  return false;
+			  }else if(document.forms.employeepro.email.value==""){
+				  alert("email must be filled out");
+				  return false;
+			  }else if(document.forms.employeepro.bday.value==""){
+				  alert("birthday must be filled out");
+				  return false;
+			  }else if(document.forms.employeepro.gender.value==""){
+				  alert("gender must be filled out");
+				  return false;
+			  }else if(document.forms.employeepro.country.value=="null"){
+				  alert("country must be filled out");
+				  return false;
+			  }else{
+				  alert("Form Validate successfilly");
+				  return true;
+			  }
+			}
+		</script>
+</head>
+<body>
+      <!-- Add your site or application content here -->
+	<div class="row">
+	     <div class="col-lg-12">
+		<div class="container main"align="center">
+		<form action="" name="employeepro" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+		<h1>Employees information </h1>
+		<table class="table table-hover"border="2">
+			<tr>
+				<td>Employee Name</td>
+				<td><input maxlength="30" type="text" name="name" value=""></td>
+			</tr>
+			<tr>
+				<td>Work Shift:</td>
+                                         <td>
+                                         <input type="radio" name="workshift" value="morning"/>Morning
+                                         <input type="radio" name="workshift" value="day"/>Day
+				</td>
+			</tr>
+			<tr>
+				<td>Department:</td>
+				<td>
+				<select id="department" name="department">
+				<option value="null">Select Department</option>
+                                         <option value="marketing">Marketing</option>
+                                         <option value="sales">Sales</option>
+                                         <option value="financial">Financial</option>
+                                         <option value="others">Others</option>
+                                         </select>
+				</td>
+			</tr>
+			<tr>
+				<td>E-Mail </td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>Birthday</td>
+				<td><input type="date" name="bday" value=""></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>
+				<input type="radio" id="male" name="gender" value="Male"  checked>Male &nbsp;
+				input type="radio" id="female" name="gender" value="Female">Female &nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td>Country</td>
+				<td>
+				<select class="country" name="country">                            
+				<option value="null">Select Country</option>
+				<option value="Bangladesh">Bangladesh</option>
+				<option value="India">India</option>
+				<option value="Nepal">Nepal</option>
+				<option value="Bhutan">Bhutan</option>
+				</select>
+                                         </td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+				<input id="submit" type="submit" value="Submit" name="submit">
+				<input id ="reset" type="reset" value="Reset" name="sreset">
+				</td>
+			</tr>
+		</table>
+	</form
+	</div>
+       </div>
+    </div>
+</body>
+</html>
+ 
